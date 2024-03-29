@@ -13,8 +13,8 @@ python get_model.py -data_dir dataset/OF17_jpg
 ```
 
 ## Running CMGFuzz
+`python select_seeds_CMG -dataset OF17  -data_dir dataset/OF17_jpg`
 ```
-python select_seeds_CMG -dataset OF17  -data_dir dataset/OF17_jpg
 python Cluster_CMG.py seeds_jpg/OF17
 python  Generate_CMG.py -dataset_path seeds_jpg/OF17 -std 70 -domain flower
 python combine.py
