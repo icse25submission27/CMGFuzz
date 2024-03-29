@@ -18,6 +18,7 @@ import warnings
 
 warnings.filterwarnings("ignore", category=FutureWarning, module="sklearn.cluster._kmeans")
 data_dir = "CMGFuzz/seeds_jpg/OF17_result"
+output_dir = "CMGFuzz/seeds_jpg/OF17_cleaned"
 std=70
 
 def dict_to_dataloader(data_by_label, batch_size):
@@ -145,9 +146,6 @@ if 1:
     img_transformer=transforms.ToPILImage()
     ts_transformer=transforms.ToTensor()
     
-    tmp_dir=os.path.join(data_dir, "output")
-    data_dir="LTOrg"
-    output_dir=os.path.join(data_dir,'cleanedCRA')
     image_datasets = {
     'train': datasets.ImageFolder(os.path.join(data_dir, 'train'), data_transforms['train']),
     'add': datasets.ImageFolder(os.path.join(data_dir, 'result'),, data_transforms['result']),
