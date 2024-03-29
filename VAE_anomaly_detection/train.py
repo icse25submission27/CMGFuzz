@@ -71,10 +71,10 @@ def main():
 
     model = VAEAnomalyTabular(args.input_size, args.latent_size, args.num_resamples, lr=args.lr)
 
-    train_set = dataset.in100_dataset("",train=True)  # set here your dataset
+    train_set = dataset.iflw17_dataset("",train=True)  # set here your dataset
     train_dloader = DataLoader(train_set, args.batch_size)
 
-    val_dataset = dataset.in100_dataset("",train=False)  # set here your dataset
+    val_dataset = dataset.flw17_dataset("",train=False)  # set here your dataset
     val_dloader = DataLoader(val_dataset, args.batch_size)
 
     # for inputs, labels in train_dloader:
