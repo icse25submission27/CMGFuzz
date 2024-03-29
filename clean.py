@@ -17,7 +17,7 @@ from torch.utils.data import DataLoader, TensorDataset, ConcatDataset, Subset
 import warnings
 
 warnings.filterwarnings("ignore", category=FutureWarning, module="sklearn.cluster._kmeans")
-data_dir = ""
+data_dir = "CMGFuzz/seeds_jpg/OF17_result"
 std=70
 
 def dict_to_dataloader(data_by_label, batch_size):
