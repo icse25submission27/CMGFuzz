@@ -7,7 +7,7 @@ from torchvision.utils import save_image
 import shutil
 from PIL import Image
 
-input_path='/home/ubuntu/hbl/largeD/Flower17/LT2/train'
+input_path='seeds_jpg/OF17/'
 
 def getAllChildren(path):
     res=[]
