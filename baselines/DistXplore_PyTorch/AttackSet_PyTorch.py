@@ -354,8 +354,8 @@ def main():
     
     # Load initial seed and give a prediction
     orig_imgs = np.load(input_file)
-    if orig_imgs.shape[0]>=pop_num:
-        orig_imgs=orig_imgs[:pop_num]
+    if orig_imgs.shape[0]>=100:
+        orig_imgs=orig_imgs[:100]
     print(orig_imgs.shape)
     # pop_num=orig_imgs.shape[0]
     model.eval()
@@ -381,10 +381,10 @@ def main():
             path = os.path.join(nes_path, p)
             tmp_nes = np.load(path)   
             perm_idxs=list(range(len(tmp_nes)))
-            if len(tmp_nes)>=pop_num:
-                perm_idxs=np.random.choice(perm_idxs,pop_num,replace=False)
+            if len(tmp_nes)>=100:
+                perm_idxs=np.random.choice(perm_idxs,100,replace=False)
             else:
-                perm_idxs=np.random.choice(perm_idxs,pop_num,replace=True)
+                perm_idxs=np.random.choice(perm_idxs,100,replace=True)
             tmp=[]
             for i in perm_idxs:
                 tmp.append(tmp_nes[i])
